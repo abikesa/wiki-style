@@ -50,6 +50,7 @@ main#content {
   margin: 0 auto;
 }
 
+
 aside#settings-bar {
   background-color: #f8f9f9;
   padding: 1em;
@@ -78,61 +79,42 @@ p {
   margin-bottom: 1em;
 }
 
-aside.infobox {
-  background-color: var(--bg-secondary);
-  border: 1px solid var(--border-color);
+aside#infobox {
+  background-color: #f8f9fa;
+  border: 1px solid #eaecf0;
   padding: 1em;
   float: right;
-  width: 320px;
+  width: 250px;
   margin: 0 0 1em 1em;
-  font-family: Georgia, serif;
-  line-height: 1.5; /* Fixed typo */
-  color: var(--text-main);
 }
 
-aside.infobox img {
+aside#infobox img {
   width: 100%;
   border-radius: 8px;
   margin-bottom: 8px;
 }
 
-aside.infobox table {
+aside#infobox table {
   width: 100%;
   border-collapse: collapse;
 }
 
-aside.infobox th {
-  background-color: var(--bg-box);
+aside#infobox th {
+  background-color: #cedff2;
   font-size: 1.2em;
   padding: 0.5em;
   text-align: center;
 }
 
-aside.infobox td {
+aside#infobox td {
   padding: 0.5em;
-  border: 1px solid var(--border-color);
+  border: 1px solid #eaecf0;
 }
 
-aside.infobox caption {
+aside#infobox caption {
   font-weight: bold;
   padding: 8px;
-  background-color: var(--bg-box);
-}
-
-aside.infobox blockquote {
-  border-left: 3px solid var(--border-color);
-  padding-left: 1em;
-  margin-top: 1em;
-  font-style: italic;
-  font-size: 0.95em;
-}
-
-aside.infobox a {
-  color: var(--text-main);
-}
-
-aside.infobox a:hover {
-  text-decoration: underline;
+  background-color: #eaecf0;
 }
 
 .wikitable {
@@ -172,7 +154,7 @@ aside.infobox a:hover {
 .image-placeholder p, .gif-placeholder p, .video-placeholder p, .audio-placeholder p {
   font-size: 0.9em;
   text-align: center;
-  margin as: 0;
+  margin: 0;
 }
 
 blockquote {
@@ -184,6 +166,7 @@ blockquote {
   color: #202122;
   border-radius: 4px;
 }
+
 
 .quote-callout {
   border-left: 2px solid #444;
@@ -234,7 +217,7 @@ blockquote {
   --bg-box: #f9f9f9;
   --text-main: #202122;
   --text-muted: #777;
-  --border-color: #a2a9b1; /* Wikipedia-style border */
+  --border-color: #eaecf0;
 }
 
 html[data-theme="dark"] {
@@ -242,8 +225,8 @@ html[data-theme="dark"] {
   --bg-secondary: #1e1e1e;
   --bg-box: #2a2a2a;
   --text-main: #f5f5f5;
-  --text-muted: #aaa;
-  --border-color: #555; /* Visible in dark mode */
+  --text-muted: #aaaaaa;
+  --border-color: #444;
 }
 
 body {
@@ -254,7 +237,7 @@ body {
 header,
 nav#toc,
 aside#settings-bar,
-aside.infobox,
+aside#infobox,
 .wikitable,
 blockquote,
 .quote-callout {
@@ -263,14 +246,14 @@ blockquote,
 }
 
 .wikitable caption,
-aside.infobox caption,
-aside.infobox th {
+aside#infobox caption,
+aside#infobox th {
   background-color: var(--bg-box);
 }
 
 .wikitable th,
 .wikitable td,
-aside.infobox td {
+aside#infobox td {
   border-color: var(--border-color);
 }
 
@@ -285,6 +268,24 @@ footer {
 
 #lightbox-modal {
   background-color: rgba(0, 0, 0, 0.95);
+}
+
+:root {
+  --bg-main: #ffffff;
+  --bg-secondary: #f8f9fa;
+  --bg-box: #f9f9f9;
+  --text-main: #202122;
+  --text-muted: #777;
+  --border-color: #eaecf0;
+}
+
+html[data-theme="dark"] {
+  --bg-main: #121212;
+  --bg-secondary: #1e1e1e;
+  --bg-box: #2a2a2a;
+  --text-main: #f5f5f5;
+  --text-muted: #aaa;
+  --border-color: #444;
 }
 
 @media (max-width: 768px) {
@@ -316,7 +317,7 @@ footer {
     margin: 0 auto;
   }
 
-  aside.infobox, .image-placeholder {
+  aside#infobox, .image-placeholder {
     float: none !important;
     margin: 1em auto;
     width: 100% !important;
